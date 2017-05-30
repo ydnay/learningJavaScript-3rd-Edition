@@ -4,16 +4,16 @@ $(document).ready(function () { // JS code here
   paper.setup(document.getElementById('mainCanvas')); // attahces Paper.js to the canvas
   // Here we are drawing the circles on the canvas ourselves
   // creates a circle obj (x, y, radius)
-  // var c = Shape.Circle(200, 200, 50);
-  //
-  // // c.fillColor = 'green'; // sets the fill color
-  // var c;
-  // for (var x = 25; x < 400; x += 50) {
-  //   for (var y = 25; y < 400; y += 50) {
-  //     c = Shape.Circle(x, y, 10);
-  //     c.fillColor = 'green';
-  //   }
-  // }
+  var c = Shape.Circle(200, 200, 50);
+
+  // c.fillColor = 'green'; // sets the fill color
+  var c;
+  for (var x = 25; x < 400; x += 50) {
+    for (var y = 25; y < 400; y += 50) {
+      c = Shape.Circle(x, y, 10);
+      c.fillColor = 'green';
+    }
+  }
 
   // Here we create a black, center circle with the text 'hello world'
   var c = Shape.Circle(200, 200, 80);
