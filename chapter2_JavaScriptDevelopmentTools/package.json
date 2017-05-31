@@ -1,0 +1,34 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "#### The purpose of this repo is purely academic.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./es6/test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ydnay/learningJavaScript-3rd-Edition.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ydnay/learningJavaScript-3rd-Edition/issues"
+  },
+  "homepage": "https://github.com/ydnay/learningJavaScript-3rd-Edition#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "regenerator-runtime": "^0.10.5",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "gulp-babel": "^6.1.2"
+  }
+}
