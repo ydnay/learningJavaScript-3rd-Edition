@@ -25,6 +25,11 @@ while (funds > 1 && funds < 100) {
   funds = funds - totalBet;
 
   // roll dice
+  const hand = [];
+  for (let roll = 0; roll < 3; roll++) {
+    hand.push(randFace());
+  }
+
   // collect winnings (if any)
 }
 
