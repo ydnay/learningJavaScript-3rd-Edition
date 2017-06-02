@@ -16,11 +16,15 @@ function randFace() {
 
 // control flow
 let funds = 50; // starting conditions
-while (funds > 1 && funds < 100) {
-  // place bets
-  const bets = { crown: 0, anchor: 0, heart: 0,
-    spade: 0, club: 0, diamond: 0, };
+let round = 0;
 
+while (funds > 1 && funds < 100) {
+  round++;
+  console.log(`round ${round}:`);
+  console.log(`	starting funds: ${funds}p`);
+
+  // place bets
+  const bets = { crown: 0, anchor: 0, heart: 0, spade: 0, club: 0, diamond: 0, };
   let totalBet = rand(1, funds);
   if (totalBet === 7) {
     totalBet = funds;
@@ -37,6 +41,9 @@ while (funds > 1 && funds < 100) {
   }
 
   funds = funds - totalBet;
+  console.log('\tbets: ' +
+    Object.keys(bets).map(face => `${face}: ${bets[face]} pence`).join(', ') +
+    ` (total: ${totalBet} pence)`);
 
   // roll dice
   const hand = [];
@@ -44,7 +51,9 @@ while (funds > 1 && funds < 100) {
     hand.push(randFace());
   }
 
-  // collect winnings (if any)
+  console.log(`	hand: ${hand.join(', ')}`);
+
+  // collect winnings
   let winnings = 0;
   for (let die = 0; die < hand.length; die++) {
     let face = hand[die];
@@ -52,4 +61,7 @@ while (funds > 1 && funds < 100) {
   }
 
   funds = funds + winnings;
+  console.log(`	winnings: ${winnings}`);
 }
+
+console.log(`	ending funs: ${funds}`);
