@@ -18,7 +18,7 @@ function randFace() {
 let funds = 50; // starting conditions
 let round = 0;
 
-while (funds > 1 && funds < 100) {
+while (funds > 0 && funds < 100) {
   round++;
   console.log(`round ${round}:`);
   console.log(`	starting funds: ${funds}p`);
