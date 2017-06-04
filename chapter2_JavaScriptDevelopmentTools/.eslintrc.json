@@ -9,6 +9,5 @@
     },
     "rules": {
       "no-restricted-syntax": "off"
-    },
-    eslint
+    }
 }
